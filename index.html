@@ -13,6 +13,7 @@
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet"/>    
 <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen"/>	  
 <link rel="stylesheet" href="css/scroll.css">
+<link rel="stylesheet" href="css/poupup.css">
 <link rel="canonical" href="https://pedro-santoro.github.io/planoseconvenios/index.html"/>
 
 <meta property="og:title" content="Planos de Saúde - Consultoria Personalizada">
@@ -126,6 +127,26 @@ Planos médicos com abrangência estadual, nacional ou regional, oferecendo a op
           <div align="center"><a class="navbar-brand" href="https://api.whatsapp.com/send?1=pt_BR&phone=5521985371561" target="_blank"><img src="images/whats.webp" title="Whatsapp" class="img-fluid" alt="Whatsapp"/></a> </div>
         </div>
     </div>
+    <article>
+		<button id="abrir-modal" class="btn-abrir">Agendar Consulta</button>
+
+<div id="meuModal" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar-modal">&times;</span>
+        <h2>Agendamento Rápido</h2>
+        <p>Preencha seus dados para entrarmos em contato.</p>
+        
+        <form action="https://formsubmit.co/santoro.perito@gmail.com" method="POST">
+			<input type="hidden" name="_template" value="table">
+			  <input type="hidden" name="_next" value="https://pedro-santoro.github.io/conveniosmedicos/obrigado.html">
+             <input type="text" name="Nome" placeholder="Seu Nome" required>
+			<input type="number" name="telefone" type="tel" placeholder="Seu whatsapp" required>
+			 <input type="email" name="Email" placeholder="Seu Email" required>
+             <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+    </div>
+</div>
+	</article>
  <hr class="featurette-divider"/>
 <footer style="width: 100%; text-align: center; padding: 20px 0; background: #f8f8f8; font-size: 14px; display: block; clear: both;">
   <b>Copyright © 2025 · Todos os direitos reservados · </b>
@@ -137,6 +158,7 @@ Planos médicos com abrangência estadual, nacional ou regional, oferecendo a op
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
- 
-</body>
+    <script src="js/pouppup.js"></script>
+    <script src="js/tel.js"></script>
+ </body>
 </html>

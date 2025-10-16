@@ -14,6 +14,7 @@
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet"/>     
   <link rel="stylesheet" href="css/scroll.css">
   <link rel="stylesheet" type="text/css" href="css/estilo.css" media="screen"/>	   
+  <link rel="stylesheet" href="css/poupup.css">
   <link rel="canonical" href="https://pedro-santoro.github.io/planoseconvenios/sobre.html"/>
 
   <meta property="og:title" content="Sobre Nós - Especialistas em Saúde Empresarial">
@@ -25,16 +26,6 @@
   <meta name="twitter:title" content="Sobre Nós - Saúde Empresarial com Confiança">
   <meta name="twitter:description" content="Conheça nossa missão e valores na consultoria de planos de saúde empresariais.">
   <meta name="twitter:image" content="https://pedro-santoro.github.io/planoseconvenios/images/planos-de-saude-capa.jpg">
-	<meta name="google-site-verification" content="o_vMsBMWi-CEsgRqoofUCHrUCk1G9gug0OYYsI_EoDc" />
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3VP544YKBS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3VP544YKBS');
-</script>
 </head>
   <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -133,6 +124,27 @@ Estamos disponíveis das 08:00 às 20:00 horas de 2ª a 6ª.
           <div align="center"><a class="navbar-brand" href="https://api.whatsapp.com/send?1=pt_BR&phone=5521985371561" target="_blank"><img src="images/whats.webp" title="Whatsapp" class="img-fluid" alt="Whatsapp"/></a> </div>
         </div>
     </div>
+	  <article>
+		<button id="abrir-modal" class="btn-abrir">Agendar Consulta</button>
+
+<div id="meuModal" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar-modal">&times;</span>
+        <h2>Agendamento Rápido</h2>
+        <p>Preencha seus dados para entrarmos em contato.</p>
+        
+        <form action="https://formsubmit.co/santoro.perito@gmail.com" method="POST">
+			<input type="hidden" name="_template" value="table">
+			  <input type="hidden" name="_next" value="https://pedro-santoro.github.io/conveniosmedicos/obrigado.html">
+			  
+             <input type="text" name="nome_completo" placeholder="Seu Nome" required>
+			<input type="text" id="whats" name="whats" placeholder="Seu whatsapp" required>
+			 <input type="email" name="email" placeholder="Seu Email" required>
+             <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+    </div>
+</div>
+	</article>
  <hr class="featurette-divider"/>
 <footer style="width: 100%; text-align: center; padding: 20px 0; background: #f8f8f8; font-size: 14px; display: block; clear: both;">
   <b>Copyright © 2025 · Todos os direitos reservados · </b>
@@ -144,5 +156,7 @@ Estamos disponíveis das 08:00 às 20:00 horas de 2ª a 6ª.
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
+	    <script src="js/pouppup.js"></script>
+	<script src="js/tell.js"></script>
  </body>
  </html>

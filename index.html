@@ -26,16 +26,6 @@
   <meta name="twitter:title" content="Planos de Saúde - Atendimento Rápido">
   <meta name="twitter:description" content="Encontre o plano de saúde ideal com desconto e sem enrolação.">
   <meta name="twitter:image" content="https://pedro-santoro.github.io/planoseconvenios/images/planos-de-saude-capa.jpg">
-	<meta name="google-site-verification" content="o_vMsBMWi-CEsgRqoofUCHrUCk1G9gug0OYYsI_EoDc" />
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3VP544YKBS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3VP544YKBS');
-</script>
   </head>
   <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -149,9 +139,10 @@ Planos médicos com abrangência estadual, nacional ou regional, oferecendo a op
         <form action="https://formsubmit.co/santoro.perito@gmail.com" method="POST">
 			<input type="hidden" name="_template" value="table">
 			  <input type="hidden" name="_next" value="https://pedro-santoro.github.io/conveniosmedicos/obrigado.html">
-             <input type="text" name="Nome" placeholder="Seu Nome" required>
-			<input type="number" name="telefone" type="tel" placeholder="Seu whatsapp" required>
-			 <input type="email" name="Email" placeholder="Seu Email" required>
+			  
+             <input type="text" name="nome_completo" placeholder="Seu Nome" required>
+			<input type="text" id="whats" name="whats" placeholder="Seu whatsapp" required>
+			 <input type="email" name="email" placeholder="Seu Email" required>
              <button type="submit" class="btn-enviar">Enviar</button>
             </form>
     </div>
@@ -169,6 +160,6 @@ Planos médicos com abrangência estadual, nacional ou regional, oferecendo a op
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap-4.4.1.js"></script>
     <script src="js/pouppup.js"></script>
-    <script src="js/tel.js"></script>
+    <script src="js/tell.js"></script>
  </body>
 </html>

@@ -1,9 +1,269 @@
-.container{
-	width: 90%;
+p {
+  text-align: justify;
 }
-p{
-	text-align: justify;
+
+h3 {
+  text-align: center;
 }
-h3{
-	text-align: center;
+
+/*------------UL-----LI-------------*/
+.lista-beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-beneficios li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 35px;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: slideIn 0.6s forwards;
+}
+
+/* ícone SVG no lugar das bolinhas */
+.lista-beneficios li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml;utf8,<svg fill="%2325D366" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.485 1.929a1 1 0 0 1 .09 1.412l-7.07 8a1 1 0 0 1-1.45.07l-3.07-2.87a1 1 0 1 1 1.36-1.46l2.32 2.16 6.37-7.2a1 1 0 0 1 1.45-.11z"/></svg>') no-repeat center;
+  background-size: contain;
+  animation: pulse 1.6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* delay pra cada item entrar em sequência */
+.lista-beneficios li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lista-beneficios li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lista-beneficios li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lista-beneficios li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lista-beneficios li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lista-beneficios li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lista-beneficios li:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.lista-beneficios li:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.lista-beneficios li:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.lista-beneficios a.btn {
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+/*===============FORMULARIO PRINCIPAL======================*/
+/* CONTAINER: Permite que o ícone flutue (position: absolute) dentro dele */
+.campo-input-principal {
+  position: relative;
+  /* Remove a margem inferior daqui, pois o .field já a controla */
+}
+
+/* ÍCONE: Define o tamanho, cor e posição */
+.campo-input-principal .icon-principal {
+  position: absolute;
+  left: 10px;
+  /* 10px da borda */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: #4CAF50;
+  /* Cor verde para combinar com o tema */
+  opacity: 0.8;
+  z-index: 10;
+  /* Garante que o ícone fique na frente */
+}
+
+/* INPUT e TEXTAREA: Afasta o texto do ícone */
+.campo-input-principal input,
+.campo-input-principal textarea {
+  /* 💡 O seu CSS original do input deve ficar aqui, mas adicione o text-indent: */
+
+  /* Exemplo do seu input: */
+  width: 100%;
+  /* ... outras propriedades de estilo do seu input ... */
+
+  /* ESSENCIAL: Afastamento do texto */
+  text-indent: 30px;
+  /* Ícone (20px) + left (10px) + folga (15px) = 45px */
+}
+
+/* Se for estilizar a caixa de Mensagem (textarea) com ícone: */
+.campo-input-principal textarea {
+  padding-top: 10px;
+  /* Ajuste o padding superior para centralizar o ícone */
+  padding-bottom: 10px;
+}
+
+/*============ESTILOS ELEMENTOS NAV=============*/
+/* Estilos do WhatsApp no Header */
+.telefone-whats a {
+  font-size: 1.1rem;
+  display: flex;
+  /* Para alinhar o ícone e o texto */
+  align-items: center;
+}
+
+.telefone-whats img {
+  height: 35px;
+  margin-right: 5px;
+}
+
+/* Ajustes para telas menores (se necessário) */
+@media (max-width: 768px) {
+  /* Se o navbar-expand-lg for usado, a barra já se comporta bem no mobile.
+        Remover estilos de 'header' que agora é a 'nav' */
+}
+
+/* Customização do Toggler do Bootstrap */
+.navbar-toggler.custom-toggler {
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+/* Ícone hamburguer padrão */
+.navbar-toggler-icon {
+  /* Mantenha o SVG do ícone aqui ou mova para o CSS externo */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Ícone X quando aberto */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  /* Mantenha o SVG do ícone X aqui ou mova para o CSS externo */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' d='M6 6L24 24M6 24L24 6'/%3E%3C/svg%3E");
+}
+
+/* Animação suave (fade + slide) do menu */
+.navbar-collapse {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform-origin: top left;
+}
+
+.navbar-collapse:not(.show) {
+  /* Estas regras só são aplicadas quando o menu NÃO tem a classe 'show' */
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Logo na barra de navegação */
+.navbar-brand img {
+  height: 80px;
+  /* Ajuste a altura diretamente aqui */
+}
+
+/* Ajustes de botões no menu */
+.navbar-nav .nav-item .btn {
+  font-weight: 500;
+}
+
+.navbar-nav .btn {
+  border-radius: 0.6rem;
+  font-weight: 500;
+}
+
+/* Corrige posição do WhatsApp no mobile */
+@media (min-width: 992px) {
+
+  /* breakpoint lg */
+  .navbar-collapse,
+  .navbar-collapse:not(.show) {
+    opacity: 1 !important;
+    /* Força visibilidade total no desktop */
+    transform: none !important;
+    /* Remove qualquer transformação no desktop */
+  }
+}
+
+.navbar-collapse.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* AJUSTE PARA AUMENTAR A BORDA DOS BOTÕES DO MENU */
+.navbar-nav .nav-item .btn,
+.navbar-nav .btn {
+  /* Propriedades que você já tem: */
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+
+  /* PROPRIEDADE ADICIONADA: Aumenta a espessura da borda */
+  border-width: 3px;
+  /* Tente 2px ou 3px. Eu recomendo 3px para ser notável. */
+}
+
+/* Opcional, para garantir que o hover também use a borda mais grossa */
+.navbar-nav .nav-item .btn:hover {
+  border-width: 3px;
+}
+
+/*========ELEMENTOS BUTTONS MENU===========*/
+.navbar-nav .btn {
+  font-weight: 600;
+  /* Deixa o texto mais marcante */
+  border-width: 2px;
+  /* Borda mais grossa, estilo botão mesmo */
+  padding: 0.5rem 1rem;
+  /* Dá aquele "respiro" dentro do botão */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* Um toque sutil de sombra */
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .btn:hover {
+  transform: translateY(-2px);
+  /* Leve efeito de destaque ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

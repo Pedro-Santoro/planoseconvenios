@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // --- Função de formatação ---
     function formatarTelefone(input) {
         let valor = input.value.replace(/\D/g, '');
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- Função que aplica a máscara a um campo específico ---
     function aplicarMascara(input) {
         if (!input.hasAttribute("data-mascara-ok")) {
-            input.addEventListener("input", function() {
+            input.addEventListener("input", function () {
                 formatarTelefone(input);
             });
             input.setAttribute("data-mascara-ok", "true");
@@ -48,3 +48,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new MutationObserver(() => verificarCampos());
     observer.observe(document.body, { childList: true, subtree: true });
 });
+//ELEMENTOS NAVs
+    const toggler = document.querySelector('.navbar-toggler');
+    const icon = toggler.querySelector('.navbar-toggler-icon');
+    const menu = document.querySelector('#navbarNav'); // Corrigido para o ID correto
+
+    if (menu) {
+      // muda o ícone quando abre/fecha
+      menu.addEventListener('show.bs.collapse', () => {
+        // A classe 'collapsed' é removida pelo Bootstrap, o CSS já aplica o ícone 'X'
+        // Você pode remover este bloco se o CSS for suficiente.
+      });
+
+      menu.addEventListener('hide.bs.collapse', () => {
+        // A classe 'collapsed' é adicionada pelo Bootstrap
+        // Você pode remover este bloco se o CSS for suficiente.
+      });
+    } else {
+      console.warn("Elemento #navbarNav não encontrado.");
+    }

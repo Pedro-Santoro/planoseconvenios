@@ -267,3 +267,59 @@ h3 {
   /* Leve efeito de destaque ao passar o mouse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/*============ZOOMM=============*/
+.figure-efeito-zoom-descricao-unico {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagem com transição suave */
+.figure-efeito-zoom-descricao-unico img.img-fluid {
+  transition: transform 0.5s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Efeito de zoom + sombra no hover */
+.figure-efeito-zoom-descricao-unico:hover img.img-fluid {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Descrição sobre a imagem */
+.figure-efeito-zoom-descricao-unico figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Mostra a legenda ao passar o mouse */
+.figure-efeito-zoom-descricao-unico:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Logo pulsando infinito --- */
+.logo-pulsando-infinito {
+  width: 120px;
+  animation: animacao-pulsar-infinita 2.2s infinite ease-in-out;
+}
+
+@keyframes animacao-pulsar-infinita {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}

@@ -41,7 +41,7 @@
     <div class="container-fluid">
 
       <a class="navbar-brand" href="contato.html">
-        <img src="images/logo-planoB.jpg" alt="Logo Planos de Saúde - Pedro Santoro - Individual ou empresarial."
+        <img src="images/logo-planoB.jpg" class="logo-pulsando-infinito" alt="Logo Planos de Saúde - Pedro Santoro - Individual ou empresarial."
           style="height: 80px; border-radius: 15px;">
       </a>
 
@@ -91,7 +91,7 @@
         <h4 align="center" itemprop="name">Peça aqui conosco</h4>
         <span>Os valores dos planos de saúde da Sulamérica</span><br><br>
         <span>Planos Individual, Empresarial e Familiar mais barato.</span><br><br>
-        <figure>
+         <figure class="figure-efeito-zoom-descricao-unico">
           <img src="images/contatos.webp" alt="qual o plano de saúde que cobre cirurgias em geral"
             title="Consulte os valores dos nossos planos" class="img-fluid">
           <figcaption><strong>Preços e planos com valores mais baratos</strong></figcaption>
@@ -110,15 +110,28 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://pedro-santoro.github.io/planoseconvenios/sucesso.html">
 
-            <!-- Nome -->
-            <div class="field full">
-              <label for="nome">Seu nome* (obrigatório):</label>
-              <div class="campo-input-principal">
-                <svg class="icon-principal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M12 4a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4zM12 14c4.41 0 8 3.59 8 8v2H4v-2c0-4.41 3.59-8 8-8z" />
-                </svg>
-                <input id="nome" type="text" name="nome" required placeholder="Digite aqui seu Nome!">
+            <!-- Nome e E-Mail (lado a lado) -->
+            <div class="linha-dupla">
+              <div class="field metade">
+                <label for="nome">Seu nome* (obrigatório):</label>
+                <div class="campo-input-principal">
+                  <svg class="icon-principal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M12 4a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4zM12 14c4.41 0 8 3.59 8 8v2H4v-2c0-4.41 3.59-8 8-8z" />
+                  </svg>
+                  <input id="nome" type="text" name="nome" required placeholder="Digite aqui seu Nome!">
+                </div>
+              </div>
+              <!-- E-mail -->
+              <div class="field metade">
+                <label for="email">E-mail* (obrigatório):</label>
+                <div class="campo-input-principal">
+                  <svg class="icon-principal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                  <input id="email" type="email" name="email" required placeholder="Digite aqui seu E-Mail!">
+                </div>
               </div>
             </div>
 
@@ -146,18 +159,6 @@
                   <input id="telefone_fixo" name="telefone_fixo" type="tel" placeholder="Ex: (99) 9999-9999"
                     onkeyup="formatarTelefone(this)" maxlength="15">
                 </div>
-              </div>
-            </div>
-
-            <!-- E-mail -->
-            <div class="field full">
-              <label for="email">E-mail* (obrigatório):</label>
-              <div class="campo-input-principal">
-                <svg class="icon-principal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-                <input id="email" type="email" name="email" required placeholder="Digite aqui seu E-Mail!">
               </div>
             </div>
 

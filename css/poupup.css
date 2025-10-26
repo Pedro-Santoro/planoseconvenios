@@ -80,7 +80,15 @@
         opacity: 1;
     }
 }
-
+/* Combina o fadeIn com o pulsar infinito no logo do popup */
+.popup-logo img.logo-pulsando-infinito {
+  animation: fadeInLogo 0.8s ease, animacao-pulsar-infinita 2.2s infinite ease-in-out;
+}
+@keyframes animacao-pulsar-infinita {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
 
 /* Animação para aparecer suavemente (opcional) */
 @keyframes animatetop {

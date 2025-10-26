@@ -34,12 +34,12 @@
 </head>
 
 <body>
- <nav class="navbar navbar-expand-lg navbar-light bg-white p-2 shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white p-2 shadow-sm">
     <div class="container-fluid">
 
       <a class="navbar-brand" href="sobre.html">
-        <img src="images/logo-planoA.jpg" alt="Logo Planos de Saúde - Consultor - Pedro Santoro"
-          style="height: 80px; border-radius: 15px;">
+        <img src="images/logo-planoA.jpg" class="logo-pulsando-infinito"
+          alt="Logo Planos de Saúde - Consultor - Pedro Santoro" style="height: 80px; border-radius: 15px;">
       </a>
 
       <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -102,7 +102,7 @@
         </ul>
       </div>
       <div class="col-12 col-md-5">
-        <figure>
+        <figure class="figure-efeito-zoom-descricao-unico">
           <img src="images/planoSula.webp" style="border-radius: 20px;" alt="seguro saúde pessoa física"
             title="Sul America Saúde PME" class="img-fluid" />
           <figcaption><strong>Planos Médicos familiar mais baratos</strong></figcaption>
@@ -139,7 +139,7 @@
       </div>
 
       <div class="col-12 col-md-5 order-md-1">
-        <figure>
+        <figure class="figure-efeito-zoom-descricao-unico">
           <img src="images/sulamerica-reembolso.webp" style="border-radius: 20px;"
             alt="qual planos de saude mais barato" title="Reembolso Sulamérica saúde" class="img-fluid" />
           <figcaption><strong>Você pode ter planos com direitos a opção de reembolso</strong></figcaption>
@@ -164,14 +164,12 @@
           Estamos disponíveis das 08:00 às 20:00 horas de 2ª a 6ª.
           <br /><br />
       </div>
-      <div class="col-12 col-md-5"> 
-        <figure>
+      <div class="col-12 col-md-5">
+        <figure class="figure-efeito-zoom-descricao-unico">
           <img src="images/plano-de-saude-sulamerica.webp" style="border-radius: 20px;"
             alt="qual plano de saude cobre cirurgia plastica" title="Planos de Saúde Sulamerica" class="img-fluid" />
           <figcaption><strong>Tenha o melhor da medicina em suas mãos</strong></figcaption>
-        </figure><br /><br />
-        <div align="center"><a class="navbar-brand" href="https://api.whatsapp.com/send?1=pt_BR&phone=5521985371561"
-            target="_blank"><img src="images/whats.webp" title="Whatsapp" class="img-fluid" alt="Whatsapp" /></a> </div>
+        </figure>
       </div>
     </div>
     <article>
@@ -182,14 +180,12 @@
           <span class="fechar-modal">&times;</span>
           <!-- Logo no topo -->
           <div class="popup-logo">
-            <img src="images/logo-medicos.webp" alt="Logo da empresa">
+            <img src="images/logo-medicos.webp" class="logo-pulsando-infinito" alt="Logo da empresa">
           </div>
           <h2 class="titulo-modal">Agendamento Rápido</h2>
           <p class="lead">Preencha seus dados para entrarmos em contato.</p>
 
-          <form action="https://formsubmit.co/santoro.perito@gmail.com" method="POST">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://pedro-santoro.github.io/conveniosmedicos/obrigado.html">
+          <form action="https://crm.planosdesaudebrj.com.br/recebe_leads.php" method="POST">
 
             <div class="campo-input">
               <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -309,27 +305,27 @@
       }
 
 
-  /* Animação de “pulso” */
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-    }
+      /* Animação de “pulso” */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+        }
 
-    70% {
-      transform: scale(1.05);
-      box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-    }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+        }
 
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-  }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
 
-  .whats-button {
-    animation: pulse 2s infinite;
-  }
+      .whats-button {
+        animation: pulse 2s infinite;
+      }
 
 
       /* Exibe o balão automaticamente ou no hover */

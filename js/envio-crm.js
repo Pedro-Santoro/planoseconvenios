@@ -4,19 +4,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form || !origemInput) return;
 
-  // 1️⃣ Captura do domínio
+  // 1️⃣ Captura do domínio atual
   const dominio = window.location.hostname;
+  const urlCompleta = window.location.href;
   origemInput.value = dominio;
 
-  // 2️⃣ Define a página de sucesso/obrigado
+  // 2️⃣ Define a página de sucesso/obrigado de acordo com o subdomínio
   let urlDestino;
-  const urlCompleta = window.location.href;
-  if (urlCompleta.includes("planoseconvenios")) {
-    urlDestino = "https://pedro-santoro.github.io/planoseconvenios/sucesso.html";
-  } else if (urlCompleta.includes("planosempresariais")) {
-    urlDestino = "https://pedro-santoro.github.io/planosempresariais/obrigado.html";
+
+  if (urlCompleta.includes("convenios.planosdesaudephs.com.br")) {
+    urlDestino = "https://convenios.planosdesaudephs.com.br/sucesso.html";
+
+  } else if (urlCompleta.includes("empresa.planosdesaudephs.com.br")) {
+    urlDestino = "https://empresa.planosdesaudephs.com.br/obrigado.html";
+
+  // 🔹 Exemplo: novos subdomínios (futuro)
+  } else if (urlCompleta.includes("blog.planosdesaudephs.com.br")) {
+    urlDestino = "https://blog.planosdesaudephs.com.br/obrigado.html";
+
+  } else if (urlCompleta.includes("saude.planosdesaudephs.com.br")) {
+    urlDestino = "https://saude.planosdesaudephs.com.br/obrigado.html";
+
+  } else if (urlCompleta.includes("clinicas.planosdesaudephs.com.br")) {
+    urlDestino = "https://clinicas.planosdesaudephs.com.br/obrigado.html";
+
   } else {
-    urlDestino = "https://pedro-santoro.github.io/planosmedicos/";
+    // 🔸 Padrão/fallback
+    urlDestino = "https://convenios.planosdesaudephs.com.br/";
   }
 
   // 3️⃣ Envio do formulário
@@ -24,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const dados = new FormData(form);
 
-    // Redirecionamento seguro mesmo se o CRM der problema
+    // Função de redirecionamento segura
     const redirecionar = () => window.location.href = urlDestino;
 
     try {
@@ -32,21 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://crm.planosdesaudebrj.com.br/recebe_leads.php/api/captura",
         {
           method: "POST",
-          body: dados
+          body: dados,
         }
       );
 
-      // Log para debug
       console.log("Status do CRM:", resposta.status);
       const texto = await resposta.text();
       console.log("Resposta do CRM:", texto);
 
-      // Sempre redireciona
       redirecionar();
 
     } catch (erro) {
       console.error("Erro no envio para o CRM:", erro);
-      // Redireciona mesmo com erro
       redirecionar();
     }
   });

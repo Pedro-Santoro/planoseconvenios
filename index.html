@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -187,7 +187,6 @@
 
           <form action="https://crm.planosdesaudebrj.com.br/recebe_leads.php" id="form-popup" method="POST">
 
-
             <div class="campo-input">
               <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
@@ -250,106 +249,12 @@
 
     <!-- Script WhatsApp -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const tooltip = document.querySelector('.whats-tooltip');
-        const btn = document.querySelector('.whats-button');
-
-        // Mostra automaticamente ao carregar
-        tooltip.classList.add('show');
-        setTimeout(() => tooltip.classList.remove('show'), 4000);
-
-        // Mostra no hover
-        btn.addEventListener('mouseenter', () => tooltip.classList.add('show'));
-        btn.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
-      });
+    document.addEventListener("DOMContentLoaded",()=>{let e=document.querySelector(".whats-tooltip"),s=document.querySelector(".whats-button");e.classList.add("show"),setTimeout(()=>e.classList.remove("show"),4e3),s.addEventListener("mouseenter",()=>e.classList.add("show")),s.addEventListener("mouseleave",()=>e.classList.remove("show"))});
     </script>
 
     <!-- Estilos -->
     <style>
-      /*================WHATSAPP======================*/
-      .whats-button {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        background-color: #25D366;
-        color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
-        text-decoration: none;
-        transition: transform 0.2s ease;
-      }
-
-      .whats-button:hover {
-        background-color: #20c05a;
-        transform: scale(1.08);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      }
-
-      .whats-tooltip {
-        position: fixed;
-        bottom: 95px;
-        right: 25px;
-        background-color: #ffffff;
-        color: #333;
-        font-weight: bold;
-        font-size: 15px;
-        padding: 10px 15px;
-        border-radius: 25px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-        z-index: 9999;
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.4s ease;
-        pointer-events: none;
-      }
-
-      /* Animação de “pulso” */
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-        }
-
-        70% {
-          transform: scale(1.05);
-          box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
-        }
-
-        100% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-        }
-      }
-
-      .whats-button {
-        animation: pulse 2s infinite;
-      }
-
-      /* Animação de entrada */
-      @keyframes fadeUp {
-        0% {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Exibe o balão automaticamente ou no hover */
-      .whats-tooltip.show {
-        opacity: 1;
-        transform: translateY(0);
-        animation: fadeUp 0.4s ease;
-      }
+	.whats-button{position:fixed;bottom:25px;right:25px;background-color:#25d366;color:#fff;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:1000;text-decoration:none;transition:transform .2s;animation:2s infinite pulse}.whats-button:hover{background-color:#20c05a;transform:scale(1.08);box-shadow:0 6px 12px rgba(0,0,0,.3)}.whats-tooltip{position:fixed;bottom:95px;right:25px;background-color:#fff;color:#333;font-weight:700;font-size:15px;padding:10px 15px;border-radius:25px;box-shadow:0 2px 10px rgba(0,0,0,.15);z-index:9999;opacity:0;transform:translateY(10px);transition:.4s;pointer-events:none}@keyframes pulse{0%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{transform:scale(1.05);box-shadow:0 0 0 12px rgba(37,211,102,0)}100%{transform:scale(1);box-shadow:0 0 0 0 rgba(37,211,102,0)}}@keyframes fadeUp{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}.whats-tooltip.show{opacity:1;transform:translateY(0);animation:.4s fadeUp}
     </style>
 </body>
 
